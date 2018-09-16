@@ -445,7 +445,8 @@ configuracaoAmbienteTrabalho(){
             
             echo '# Proxy' | sudo tee --append /etc/environment > /dev/null
             echo 'no_proxy="localhost"' | sudo tee --append /etc/environment > /dev/null
-            
+            echo "alias lso=\"ls -alG | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\\\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\\\" %0o \\\",k);print}'\"" | tee --append ~/.bashrc > /dev/null
+            source ~/.bashrc
             tput setaf 2 && echo 'Pressione [ENTER] para continuar.' && tput sgr0 && read _        
 
         elif [ "$RESPOSTA" = "N" ] || [ "$RESPOSTA" = "n" ]; then
