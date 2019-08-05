@@ -1,1 +1,1 @@
-# laboratorio
+# Repositório para scritps utilitários
