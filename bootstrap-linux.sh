@@ -172,8 +172,6 @@ executaCompleto(){
 
 
 configuraRepositorios(){
-
-    # Configuração dos repositórios internos da Fóton e de terceiros.
     cabecalho
 
     tput setaf 114
